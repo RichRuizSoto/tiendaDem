@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:replace="${title} ?: 'Vans'">Vans</title>
+    <link rel="stylesheet" th:href="@{/styles/index.css}">
+</head>
+
+<body class="body">
+
+    <!-- Fragmento del Header -->
+    <header th:fragment="header" class="header">
+        <button class="header-btn header-menu-btn"></button>
+        <button class="header-btn header-vans-btn"></button>
+
+        <div class="header-btn-div">
+            <a th:href="@{/login}"><button class="header-btn header-profile-btn"></button></a>
+            <a th:href="@{/catalogo}"><button class="header-btn header-search-btn"></button></a>
+            <a th:href="@{/historial}"><button class="header-btn header-chat-btn"></button></a>
+            <a th:href="@{/carrito}"><button class="header-btn header-cart-btn"></button></a>
+        </div>
+    </header>
+
+    <!-- Fragmento del Footer -->
+    <footer th:fragment="footer" class="footer">
+
+        <section class="footer-contenedor-btn">
+            <button class="footer-btn" onclick="mostrarContenido('featured')">Featured</button>
+            <div id="div-featured" hidden></div>
+            <button class="footer-btn" onclick="mostrarContenido('icons')">Icons</button>
+            <div id="div-icons" hidden></div>
+            <button class="footer-btn" onclick="mostrarContenido('shop')">Shop & Color</button>
+            <div id="div-shop" hidden></div>
+            <button class="footer-btn" onclick="mostrarContenido('sports')">Sports</button>
+            <div id="div-sports" hidden></div>
+            <button class="footer-btn" onclick="mostrarContenido('support')">Support</button>
+            <div id="div-support" hidden></div>
+            <button class="footer-btn" onclick="mostrarContenido('about')">About</button>
+            <div id="div-about" hidden></div>
+        </section>
+
+        <section class="footer-contenedor-final">
+            <nav class="contenedor-final-redes">
+                <button class="x-btn contenedor-final-redes-btn"></button>
+                <button class="facebook-btn contenedor-final-redes-btn"></button>
+                <button class="pinterest-btn contenedor-final-redes-btn"></button>
+                <button class="youtube-btn contenedor-final-redes-btn"></button>
+                <button class="instagram-btn contenedor-final-redes-btn"></button>
+                <div class="div-location">
+                    <button class="location-flag"></button>
+                    <button class="location-text">EN | Change Location</button>
+                </div>
+            </nav>
+            <br><br>
+            <section class="footer-contenedor-term">
+                <button class="contenedor-term-btn">Modern Slavery Statement</button>
+                <button class="contenedor-term-btn">Privacy Policy</button>
+                <button class="contenedor-term-btn">Your Privacy Choices</button>
+                <button class="contenedor-term-btn">Terms of Use</button>
+                <button class="contenedor-term-btn">Accessibility Statement</button>
+                <button class="contenedor-term-btn">Notice at Collection</button>
+                <button class="contenedor-term-btn">Cookie Preferences</button>
+            </section>
+        </section>
+
+    </footer>
+
+    <script th:src="@{/scripts/index.js}"></script>
+
+</body>
+</html>
