@@ -42,12 +42,6 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
-        <!-- Thymeleaf Extras for Spring Security -->
-        <dependency>
-            <groupId>org.thymeleaf.extras</groupId>
-            <artifactId>thymeleaf-extras-springsecurity6</artifactId>
-        </dependency>
-
         <!-- DevTools -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -65,11 +59,12 @@
         </dependency>
 
         <!-- MySQL Driver -->
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <scope>runtime</scope>
-        </dependency>
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>8.0.33</version> <!-- Añade una versión explícita -->
+		</dependency>
+
 
         <!-- WebJars for Frontend Assets -->
         <dependency>
