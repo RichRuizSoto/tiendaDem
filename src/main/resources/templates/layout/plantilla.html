@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head th:fragment="head">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title th:replace="${title} ?: 'Vans'">Vans</title>
-    <link rel="stylesheet" th:href="@{/styles/index.css}">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title th:text="${title} ?: 'Vans'">Vans</title>
+    <link rel="stylesheet" th:href="@{/styles/index.css}" />
 </head>
 
 <body class="body">
 
-    <!-- Fragmento del Header -->
+    <!-- Header -->
     <header th:fragment="header" class="header">
         <button class="header-btn header-menu-btn"></button>
         <button class="header-btn header-vans-btn"></button>
@@ -23,9 +22,11 @@
         </div>
     </header>
 
-    <!-- Fragmento del Footer -->
-    <footer th:fragment="footer" class="footer">
 
+
+
+    <!-- Footer -->
+    <footer th:fragment="footer" class="footer">
         <section class="footer-contenedor-btn">
             <button class="footer-btn" onclick="mostrarContenido('featured')">Featured</button>
             <div id="div-featured" hidden></div>
@@ -64,10 +65,8 @@
                 <button class="contenedor-term-btn">Cookie Preferences</button>
             </section>
         </section>
-
     </footer>
 
     <script th:src="@{/scripts/index.js}"></script>
-
 </body>
 </html>

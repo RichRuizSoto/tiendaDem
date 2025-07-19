@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns="http://www.w3.org/1999/xhtml">
-    <head th:replace="~{layout/plantilla :: head}">
-        <title>Vans</title>        
-    </head>
-    <body>
-        <header th:replace="~{layout/plantilla :: header}"/>
-        
-        <footer th:replace="~{layout/plantilla :: footer}"/>          
-    </body>
+<head th:replace="layout/plantilla :: head">
+  <title th:text="${title} ?: 'Vans'">Vans</title>
+
+</head>
+<body>
+    <header th:replace="layout/plantilla :: header"></header>
+
+    <!-- Aquí podrías agregar contenido principal si lo necesitas -->
+
+    <footer th:replace="~{layout/plantilla :: footer}"></footer>      
+
+</body>
 </html>
- 
+
+
