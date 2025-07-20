@@ -14,7 +14,8 @@
     <!-- Header -->
     <header th:fragment="header" class="header">
         <button class="header-btn header-menu-btn"></button>
-        <button class="header-btn header-vans-btn"></button>
+        <a th:href="@{/}"><button class="header-btn header-vans-btn"></button></a>
+
 
         <div class="header-btn-div">
             <a th:href="@{/login}"><button class="header-btn header-profile-btn"></button></a>
