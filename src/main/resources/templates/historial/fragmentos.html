@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head></head>
+
+<body>
+
+    <th:block th:fragment="main">
+        <main class="main">
+
+            <section class="tabla-historial" style="margin: 7rem 2rem 5rem 2rem">
+                <h2>Historial de Compras</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Fecha</th>
+                            <th>Productos</th>
+                            <th>Total</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Fila de ejemplo -->
+                        <tr>
+                            <td>1</td>
+                            <td>05/07/2025</td>
+                            <td>
+                                Vans Old Skool<br>
+                                Vans Sk8-Hi
+                            </td>
+                            <td>$149.98</td>
+                            <td>Entregado</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>28/06/2025</td>
+                            <td>
+                                Vans Authentic
+                            </td>
+                            <td>$64.99</td>
+                            <td>En camino</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </th:block>
+
+</body>
+
+</html>

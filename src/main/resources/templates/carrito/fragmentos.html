@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head></head>
+
+<body>
+
+    <th:block th:fragment="main">
+        <main class="main" style="margin: 6rem;">
+            <h2>Tu Carrito de Compras</h2>
+            <table class="tabla-carrito">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="carrito-items">
+                </tbody>
+            </table>
+
+            <div class="resumen">
+                <h3>Total a pagar: $<span id="total-general">0.00</span></h3>
+                <button class="btn-comprar">Proceder a Pago</button>
+            </div>
+        </main>
+    </th:block>
+
+</body>
+
+</html>
