@@ -6,8 +6,9 @@
 <body>
 
     <th:block th:fragment="main">
-        <main class="main" style="margin: 6rem;">
+        <main class="carrito-container" th:fragment="main" style="margin-top: 7rem; margin-bottom: 5rem;">
             <h2>Tu Carrito de Compras</h2>
+
             <table class="tabla-carrito">
                 <thead>
                     <tr>
@@ -18,13 +19,41 @@
                         <th>Acción</th>
                     </tr>
                 </thead>
-                <tbody id="carrito-items">
+                <tbody>
+                    <tr th:each="producto, iterStat : ${carrito}">
+                        <td th:text="${producto.nombre}">Nombre Producto</td>
+                        <td th:text="${producto.precio}">0.00</td>
+                        <td>1</td>
+                        <td th:text="${producto.precio}">0.00</td>
+                        <td>
+                            <form th:action="@{'/carrito/eliminar/' + ${iterStat.index}}" method="post">
+                                <button type="submit">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr th:if="${carrito == null or #lists.isEmpty(carrito)}">
+                        <td colspan="5" style="text-align: center;">Tu carrito está vacío</td>
+                    </tr>
                 </tbody>
             </table>
 
             <div class="resumen">
-                <h3>Total a pagar: $<span id="total-general">0.00</span></h3>
-                <button class="btn-comprar">Proceder a Pago</button>
+                <h3>Total a pagar: ₡<span th:text="${total}">0.00</span></h3>
+
+                <form method="post" action="/carrito/confirmar" style="margin-top: 20px;">
+                    <label for="usuarioId">Selecciona el usuario para asociar la compra:</label>
+                    <select name="usuarioId" id="usuarioId" required>
+                        <option value="" disabled selected>Selecciona un usuario</option>
+                        <option th:each="usuario : ${usuarios}" th:value="${usuario.id}" th:text="${usuario.nombre}">
+                            Usuario</option>
+                    </select>
+                    <br><br>
+                    <button type="submit">Confirmar Compra</button>
+                </form>
+
+                <form method="post" action="/carrito/cancelar" style="margin-top: 10px;">
+                    <button type="submit">Cancelar Carrito</button>
+                </form>
             </div>
         </main>
     </th:block>

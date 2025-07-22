@@ -1,0 +1,186 @@
+.body {
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.header {
+    background-color: white;
+    width: 100%;
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+}
+
+.header-btn {
+    background-color: transparent;
+    border: none;
+    background-size: cover;
+    height: 38px;
+    width: 38px;
+    margin-top: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.header-menu-btn {
+    background-image: url(./../icons/hamburguer-icon.png);
+    height: 30px;
+    width: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.header-vans-btn {
+    background-image: url(./../icons/vans.png);
+    height: 50px;
+    width: 90px;
+}
+
+.header-btn-div {
+    width: 210px;
+}
+
+.form-section {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.product-form input,
+.product-form select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.product-form button {
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-form button:hover {
+    background-color: #555;
+}
+
+
+
+
+.footer {
+    background-color: rgb(39, 38, 38);
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    box-shadow: 0 0px 20px 15px rgba(0, 0, 0, 0.7);
+}
+
+.footer-contenedor-final {
+    margin-top: 120px;
+    margin-left: 22px;
+}
+
+.contenedor-final-redes-btn {
+    background-color: transparent;
+    border: none;
+    background-size: cover;
+    width: 13px;
+    height: 13px;
+    margin: 8px;
+    cursor: pointer;
+    justify-content: baseline;
+}
+
+.x-btn {
+    background-image: url(./../icons/x.png);
+}
+
+.facebook-btn {
+    background-image: url(./../icons/facebook.png);
+    width: 12px;
+    height: 12px;
+}
+
+.pinterest-btn {
+    background-image: url(./../icons/pinterest.png);
+    width: 16px;
+    height: 16px;
+}
+
+.youtube-btn {
+    background-image: url(./../icons/youtube.png);
+}
+
+.instagram-btn {
+    background-image: url(./../icons/instagram.jpg);
+}
+
+.footer-contenedor-term {
+    width: 360px;
+    padding-bottom: 22px;
+}
+
+.div-location {
+    background-color: transparent;
+    justify-content: center;
+}
+
+.location-flag {
+    background-color: transparent;
+    background-image: url(./../icons/flag.png);
+    background-size: cover;
+    height: 18px;
+    width: 23px;
+    border: none;
+    cursor: pointer;
+}
+
+.location-text {
+    background-color: transparent;
+    color: rgb(199, 199, 199);
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    justify-content: center;
+
+}
+
+.contenedor-term-btn {
+    font-size: 12px;
+    color: rgb(199, 199, 199);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    padding: 0px;
+    margin: 2px;
+}
